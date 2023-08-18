@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Isotonic Subgroup Selection</title>
+
+    <link rel="stylesheet" href="lib/css/reveal.min.css">
+    <link rel="stylesheet" href="lib/css/black.min.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+    <link rel="stylesheet" href="lib/css/zenburn.min.css">
+
+    <!-- <link rel="stylesheet" href="index.css"> -->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3280548203_3315967912_1432274599.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3315967912_2980239461.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/96d7a747796a9666c437995d01151a82d303be4baef739e2c7ffa85b9f32e7fd.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/27a31944ca5f30f4917ebe4ad3e04fcc0ea7e7fc7c46ee13e1c514836785ce6c.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_35687807_2543687771.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_554259886_2202544616.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_4198619682_2554812597.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/5dbfa901054447b18f845159e68bf53124400aba205824be6fb0f8754f6df190.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/5cd66583417683bfae50bdb161165f65bdf16b993de9fae48022c2e90cc9038e.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2597896672_4280431862.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2359527242_1035262633.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_40778054_1353503189.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_239618243_3823727781.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/998dec913a86a1655f789d57432df04963eb9af410035b7dbba54d4e507ec0b3.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/4bdee4f842f5d61b790f96199bc3a36376ce63460eca27f713f35ffca489a165.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_442215569_1810227749.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/d5d77100099d5ab238ac7a4b849a7979665871678835cabe3d1280c817b1b55b.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/a8ef14ec341e396d6c38910af740014210901a120d07c5cbc5b7a980706a0310.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/0d816b0654b98a90b819be99505262756f8d88eb3e8903738d0fbf97e12cbd93.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/ea3419696fded8fc43f091fb9736d858f7ebe6c1af43db5b4d12d000be687997.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1638919124_1017001350.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1978765696_3924254576.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/358cf2b3baadfc056e5b9d8f363933abe3290e563261b99cf7ea854af222e9f4.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2450976211_1887021746.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/61dc0a8757c88c5da5d4f7ea07b61ffd2307940187481e5fd7b1b8507121af10.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/daabd1a432bb67b1df10de1f39c07f4be67ca5e5a987645a1549f7c046891e50.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/1b86281be20fdf60946d4ff8be6a4758b1d17757974577f55f7b3742a4b18f03.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/44e87f45de8d7f6c976274d0bf1dbc9ac6bc3c7adcf5a87861725355334e0d91.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/a7487df398c65daab47a3be516087bd9fcc57b60d41eb65cc3e5db40e8d89694.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/ab7789ad99a57298ddaf548eeb8c561cdf7eb15639104da452db42fc7c486689.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/0a5bc549a986ef2869a96623a0df9b5c1b24a05eba26aa99c0d2dcc252c822aa.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/9c6db3c4b84fc20420f0eade16e2da0220d8f8130dcc673a136129d907639456.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/9194ff456cd40bb834441a3c951a3c541427bf09fe461ec7e7fbdcf2fbd006ab.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/4e9ac60821d9a7a5dbd085b1db853939956b144a8437496e9df73c30382cb7ff.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/e77b816ad7d24a5f9fa15e4cfbdd8ef99c9458009264c26bdd7fec6fdce954a0.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/04044d41054876830efaaecbeca9b8585e617b993a12395d0a3fac9b5842412c.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_299200422_2741873496.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/07d44ea51058b22addf558a647cebaa622d681041880304849b37ffab462fd0d.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/194779d98cc67cf589ff2aea3c3038fbed57a22bcc4fd5be4222f65db051dcb4.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_756478338_3338991685.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3789091471_1570859887.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/76257cd717f9979c2b97e68144bdc017b5be1fca4eb42e4e4b20b97be45e7c18.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_384341629_3811621475.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_382549866_4281964008.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1641062679_2600831723.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/efb4e4e8f24f8362b9b51c9f6acc68ee5bcc87f598f42a26ecbe6d4859a1bbf4.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2081274135_4000887320.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_554927999_1343698018.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1646884649_2442720782.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/21d831761a314e3313bc720d9437f8c408245aa746b8025efb14a89f08e88db4.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1359435301_3240120793.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1349337486_167941404.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_67698567_634934215.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/7abe3d7c9bb91ef7f06aa77789a425cb677ac9fa6d3d167f43646929752a96e4.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3282938100_4003860159.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1157150947_118390022.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1702432543_974069415.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_67698567_4282619580.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1320838556_3097688618.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_193571797_2138827034.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/a686bd2be67329b4d074b45ed53a196c950103fc19e285b07dbc1f0c61df4192.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_211868237_816333822.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/58df5eed6c69660333e3941a287dd1759de41ac367277d4cc890a464854f6506.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3385255116_1209978096.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/8d4707adb2e99476bb5aac7ff952aac8265424bc6db8688bad229c12f03bc8a1.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2263528821_415808488.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/7dc993b84b770da78b1c13445ef60d769f18d38569f08e4ef6ab9f8902022b8a.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_973478386_1034523913.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/8d138e4e7c307fa5de3a7d09426705a04186ff26ac768c4130eb822289f39a1a.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3625972770_4150723110.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/5a0196445cebd8abc3c9340d1a735cb6a131bb541e09371a290e5a2ef57b19f3.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_939261264_2107667268.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/5b0ce3e32d5f85550bddeba6023b0d3701c3d4aeb7364c6c58fed44301398609.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3544749416_2072700932.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_4096473049_1122255453.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2633701141_169126871.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2340261148_1804513540.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2567728534_3204312968.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1922822495_2642794641.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2347223652_3857127404.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/2be1f88cdc1102260264b8302ca8199aeff2bd181a904787b082c8eb38e3ec87.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_413211269_3552082817.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_959391038_1844133246.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3684618151_2200991006.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3743327299_254635019.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/9204018a5a9848bcf1b358f6a49f2635b2bbc4a94daabcdafb37c30837b23ab1.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/ba16e10746803103e49a80ff2b0d793ae5ea874dd6da73f1e88e8a572666eb14.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3073968903_272876108.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1854811280_3490662229.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_960594948_1094038735.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2133637057_304043852.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/94101dca6d643b21af34ba2d5c09b1598d71b98900d80a2031e4ff36ec97252c.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_4222464270_1533407807.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3019404104_1796845627.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/ab4252546da13c26962299f18b9d2ccb8b98be3bc61002f944f991937ec3abce.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/126b223d2d2700dc68a4f90cd1a761f6b1e0c73fe83c0e516cf29d786ff7efc6.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3315967912_2764074220.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1454233693_223132457.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_619631335_1576315244.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_449211181_2523672947.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/2eb1d074d6c18ad5297554f384168d7d21dd5d246be0b750658ddc1194828dc7.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3881010972_3292046447.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3832399045_1196224989.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2490327198_4095467642.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/ae9e21722b7ae2c555b0fba4e57471c80efec5c7d6d7e4265e4e70887fcc2572.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3758336523_1949559563.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1315535300_862066022.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_233848558_4209953890.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/d877d9c2c464501fc839593ea50026e45997777446dfd4bab692c64d1bef4370.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2066781205_388439875.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_4063636036_2143566668.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/1a95e47b2f72d34a89bd6bd3f1e29374ac36e865d26d3e721fd5dd40e463e3ec.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1031642739_266355640.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3174118267_3353897380.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_398491605_4213327733.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1547507246_1913640799.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/867de708415304d3292108e88d5bdddad28b4a1f29d915627fe671d146367544.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1017316428_3022558866.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3961365864_2165491693.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3938201420_2189323421.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_993931458_2562109676.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2028070661_2411058735.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_4090855218_3670428674.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_4220633365_373575402.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_47728955_3454570479.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3264748708_911289884.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_1196912721_1486971747.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_126921367_3197854090.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2225955481_4240530906.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_772834598_421530691.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3045574525_3531378623.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_4031876124_327963465.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_320014328_3046297967.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3712383970_2893209760.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2722058121_302264508.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_2521531017_234451850.mp4" data-background-video-muted></section><section data-background-size='contain' data-background-color="black" data-background-video="ISS_assets/3609710077_3683716024_359913990.mp4" data-background-video-muted></section>
+      </div>
+    </div>
+
+    <script src="lib/js/reveal.min.js"></script>
+
+    <!-- To include plugins, see: https://revealjs.com/plugins/ -->
+
+    <!-- <script src="index.js"></script> -->
+    <script>
+      Reveal.initialize({
+
+                // The "normal" size of the presentation, aspect ratio will
+                // be preserved when the presentation is scaled to fit different
+                // resolutions. Can be specified using percentage units.
+                width: '100%',
+                height: '100%',
+
+                // Factor of the display size that should remain empty around
+                // the content
+                margin: 0.04,
+
+                // Bounds for smallest/largest possible scale to apply to content
+                minScale: 0.2,
+                maxScale: 2.0,
+
+                // Display presentation control arrows
+                controls: true,
+
+                // Help the user learn the controls by providing hints, for example by
+                // bouncing the down arrow when they first encounter a vertical slide
+                controlsTutorial: true,
+
+                // Determines where controls appear, "edges" or "bottom-right"
+                controlsLayout: 'bottom-right',
+
+                // Visibility rule for backwards navigation arrows; "faded", "hidden"
+                // or "visible"
+                controlsBackArrows: 'faded',
+
+                // Display a presentation progress bar
+                progress: true,
+
+                // Display the page number of the current slide
+                // - true:    Show slide number
+                // - false:   Hide slide number
+                //
+                // Can optionally be set as a string that specifies the number formatting:
+                // - "h.v":   Horizontal . vertical slide number (default)
+                // - "h/v":   Horizontal / vertical slide number
+                // - "c":   Flattened slide number
+                // - "c/t":   Flattened slide number / total slides
+                //
+                // Alternatively, you can provide a function that returns the slide
+                // number for the current slide. The function should take in a slide
+                // object and return an array with one string [slideNumber] or
+                // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+                slideNumber: false,
+
+                // Can be used to limit the contexts in which the slide number appears
+                // - "all":      Always show the slide number
+                // - "print":    Only when printing to PDF
+                // - "speaker":  Only in the speaker view
+                showSlideNumber: 'all',
+
+                // Use 1 based indexing for # links to match slide number (default is zero
+                // based)
+                hashOneBasedIndex: false,
+
+                // Add the current slide number to the URL hash so that reloading the
+                // page/copying the URL will return you to the same slide
+                hash: false,
+
+                // Flags if we should monitor the hash and change slides accordingly
+                respondToHashChanges: false,
+
+                // Push each slide change to the browser history.  Implies `hash: true`
+                history: false,
+
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
+
+                // Optional function that blocks keyboard events when retuning false
+                //
+                // If you set this to 'focused', we will only capture keyboard events
+                // for embedded decks when they are in focus
+                keyboardCondition: null,
+
+                // Disables the default reveal.js slide layout (scaling and centering)
+                // so that you can use custom CSS layout
+                disableLayout: false,
+
+                // Enable the slide overview mode
+                overview: true,
+
+                // Vertical centering of slides
+                center: true,
+
+                // Enables touch navigation on devices with touch input
+                touch: true,
+
+                // Loop the presentation
+                loop: true,
+
+                // Change the presentation direction to be RTL
+                rtl: false,
+
+                // Changes the behavior of our navigation directions.
+                //
+                // "default"
+                // Left/right arrow keys step between horizontal slides, up/down
+                // arrow keys step between vertical slides. Space key steps through
+                // all slides (both horizontal and vertical).
+                //
+                // "linear"
+                // Removes the up/down arrows. Left/right arrows step through all
+                // slides (both horizontal and vertical).
+                //
+                // "grid"
+                // When this is enabled, stepping left/right from a vertical stack
+                // to an adjacent vertical stack will land you at the same vertical
+                // index.
+                //
+                // Consider a deck with six slides ordered in two vertical stacks:
+                // 1.1    2.1
+                // 1.2    2.2
+                // 1.3    2.3
+                //
+                // If you're on slide 1.3 and navigate right, you will normally move
+                // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
+                // from 1.3 -> 2.3.
+                navigationMode: 'default',
+
+                // Randomizes the order of slides each time the presentation loads
+                shuffle: false,
+
+                // Turns fragments on and off globally
+                fragments: true,
+
+                // Flags whether to include the current fragment in the URL,
+                // so that reloading brings you to the same fragment position
+                fragmentInURL: true,
+
+                // Flags if the presentation is running in an embedded mode,
+                // i.e. contained within a limited portion of the screen
+                embedded: false,
+
+                // Flags if we should show a help overlay when the question-mark
+                // key is pressed
+                help: true,
+
+                // Flags if it should be possible to pause the presentation (blackout)
+                pause: true,
+
+                // Flags if speaker notes should be visible to all viewers
+                showNotes: false,
+
+                // Global override for autolaying embedded media (video/audio/iframe)
+                // - null:   Media will only autoplay if data-autoplay is present
+                // - true:   All media will autoplay, regardless of individual setting
+                // - false:  No media will autoplay, regardless of individual setting
+                autoPlayMedia: null,
+
+                // Global override for preloading lazy-loaded iframes
+                // - null:   Iframes with data-src AND data-preload will be loaded when within
+                //           the viewDistance, iframes with only data-src will be loaded when visible
+                // - true:   All iframes with data-src will be loaded when within the viewDistance
+                // - false:  All iframes with data-src will be loaded only when visible
+                preloadIframes: null,
+
+                // Can be used to globally disable auto-animation
+                autoAnimate: true,
+
+                // Optionally provide a custom element matcher that will be
+                // used to dictate which elements we can animate between.
+                autoAnimateMatcher: null,
+
+                // Default settings for our auto-animate transitions, can be
+                // overridden per-slide or per-element via data arguments
+                autoAnimateEasing: 'ease',
+                autoAnimateDuration: 1.0,
+                autoAnimateUnmatched: true,
+
+                // CSS properties that can be auto-animated. Position & scale
+                // is matched separately so there's no need to include styles
+                // like top/right/bottom/left, width/height or margin.
+                autoAnimateStyles: ['opacity', 'color', 'background-color', 'padding', 'font-size', 'line-height', 'letter-spacing', 'border-width', 'border-color', 'border-radius', 'outline', 'outline-offset'],
+
+                // Controls automatic progression to the next slide
+                // - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
+                //           is present on the current slide or fragment
+                // - 1+:     All slides will progress automatically at the given interval
+                // - false:  No auto-sliding, even if data-autoslide is present
+                autoSlide: 0,
+
+                // Stop auto-sliding after user input
+                autoSlideStoppable: true,
+
+                // Use this method for navigation when auto-sliding (defaults to navigateNext)
+                autoSlideMethod: null,
+
+                // Specify the average time in seconds that you think you will spend
+                // presenting each slide. This is used to show a pacing timer in the
+                // speaker view
+                defaultTiming: null,
+
+                // Enable slide navigation via mouse wheel
+                mouseWheel: false,
+
+                // Opens links in an iframe preview overlay
+                // Add `data-preview-link` and `data-preview-link="false"` to customise each link
+                // individually
+                previewLinks: false,
+
+                // Exposes the reveal.js API through window.postMessage
+                postMessage: true,
+
+                // Dispatches all reveal.js events to the parent window through postMessage
+                postMessageEvents: false,
+
+                // Focuses body when page changes visibility to ensure keyboard shortcuts work
+                focusBodyOnPageVisibilityChange: true,
+
+                // Transition style
+                transition: 'none', // none/fade/slide/convex/concave/zoom
+
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
+
+                // Transition style for full page slide backgrounds
+                backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
+                // The maximum number of pages a single slide can expand onto when printing
+                // to PDF, unlimited by default
+                pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+
+                // Prints each fragment on a separate slide
+                pdfSeparateFragments: true,
+
+                // Offset used to reduce the height of content within exported PDF pages.
+                // This exists to account for environment differences based on how you
+                // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+                // on precisely the total height of the document whereas in-browser
+                // printing has to end one pixel before.
+                pdfPageHeightOffset: -1,
+
+                // Number of slides away from the current that are visible
+                viewDistance: 3,
+
+                // Number of slides away from the current that are visible on mobile
+                // devices. It is advisable to set this to a lower number than
+                // viewDistance in order to save resources.
+                mobileViewDistance: 2,
+
+                // The display mode that will be used to show slides
+                display: 'block',
+
+                // Hide cursor if inactive
+                hideInactiveCursor: true,
+
+                // Time before the cursor is hidden (in ms)
+                hideCursorTime: 5000
+
+
+            });
+    </script>
+  </body>
+
+</html>
