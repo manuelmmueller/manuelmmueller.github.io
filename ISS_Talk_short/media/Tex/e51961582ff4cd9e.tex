@@ -1,0 +1,85 @@
+\documentclass[preview]{standalone}
+
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+        %\usepackage[textwidth=9cm,textheight=5cm]{geometry}
+        \usepackage[document]{ragged2e}
+        \usepackage{amsthm}
+        \usepackage{bm}
+        \newtheorem{theorem}{Theorem}
+
+        \usepackage{xcolor}
+
+        % manim style: https://docs.manim.community/en/stable/reference/manim.utils.color.Colors.html
+        \definecolor{text-grey}{HTML}{222222} % grey text on white background - manim gray_e
+        \definecolor{bg-grey}{HTML}{222222} % grey background (for white text) - manim gray_e
+        \definecolor{bg-grey_d}{HTML}{444444} % grey background (for white text) - manim gray_d
+
+        \definecolor{fu-blue}{HTML}{29ABCA} % blue text - manim blue_d
+        \definecolor{fu-blue_e}{HTML}{236B8E} % blue text - manim blue_e
+        \definecolor{default_blue}{HTML}{58C4DD} % blue - manim BLUE
+
+        \definecolor{fu-green}{HTML}{77B05D} % green text - manim green_d
+        \definecolor{fu-red}{HTML}{E65A4C} % red text (used by \alert) - manim red_d
+        \definecolor{fu-yellow}{HTML}{F4D345} % manim yellow_d
+        \definecolor{fu-orange}{HTML}{E1A158} % manim gold_d
+        \definecolor{fu-brown}{HTML}{CD853F} %manim light_brown
+
+        \definecolor{cb}{HTML}{A6CF8C} %manim green_b
+        \definecolor{me}{HTML}{9A72AC} %manim purple_c
+        \definecolor{spurple}{HTML}{CAA3E8} %manim purple_a
+        \definecolor{scyan}{HTML}{C7E9F1} % manim blue_a
+        \definecolor{sscyan}{HTML}{9CDCEB} % manim blue_b
+
+        \newcommand{\blue}[1]{{\color{default_blue}#1}}
+
+
+        \usepackage[english]{babel}
+        \usepackage{bbm}
+        \usepackage{etoolbox}
+        \newcommand{\support}{\mathrm{supp}}
+        \newcommand{\regressionFunction}{\eta}
+        \newcommand{\etaIncreasingExponent}{\gamma}
+        \newcommand{\etaIncreasingConstant}{\lambda}
+        \newcommand{\densityConstant}{\theta}
+        \newcommand{\sample}{\mathcal{D}}
+        \newcommand{\sampleX}{\sample_X}
+        \newcommand{\powerSet}{\mathrm{Pow}}
+        \newcommand{\superLevelSet}[2]{\mathcal{X}_{#1}(#2)}
+        \newcommand{\etaSuperLevelSet}[1]{\mathcal{X}_{#1}(\eta)}
+        \newcommand\marginalDistribution\mu
+        \newcommand{\R}{\mathbb{R}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\E}{\mathbb{E}}
+        \newcommand{\Prob}{\mathbb{P}}
+        \newcommand\distributionClassMultivariateCondition[1][]{%
+            \ifstrempty{#1}{%
+                \mathcal{P}_{\mathrm{Reg}, d}(\tau, \densityConstant, \etaIncreasingExponent,\etaIncreasingConstant)
+            }{%
+                \mathcal{P}_{\mathrm{Reg}, #1}(\tau, \densityConstant, \etaIncreasingExponent,\etaIncreasingConstant)
+                %\mathcal{P}_{\mathrm{D}, #1}(\tau,\densityConstant)
+            }%
+        }
+        \newcommand\distributionClassNonDecreasingRegressionFunction{\mathcal{P}_{\mathrm{Mon}, d}(\sigma)}
+        \newcommand\distributionClassMonReg{\mathcal{P}_{\mathrm{MonReg}, d}(\sigma, \tau, \etaIncreasingExponent, \etaIncreasingConstant, \densityConstant)}
+
+        
+
+
+
+
+
+        \def\textboxwidth{1.185\textwidth}
+        \def\referencetextboxwidth{1.48\textwidth}
+        
+\def\settingtextboxwidth{0.8\textwidth}
+\begin{document}
+
+\begin{center}
+\parbox{0.85\textwidth}{\centering \emph{Our procedure is computationally feasible and minimax-optimal up to poly-logarithmic factors.}}
+\end{center}
+
+\end{document}
